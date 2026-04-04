@@ -1,0 +1,38 @@
+const form = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    formStatus.innerHTML = "Sending...";
+    formStatus.style.color = "#555";
+
+    try {
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: json
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            formStatus.innerHTML = "Message sent successfully!";
+            formStatus.style.color = "green";
+            form.reset();
+        } else {
+            formStatus.innerHTML = "Something went wrong. Please try again.";
+            formStatus.style.color = "red";
+        }
+    } catch (error) {
+        formStatus.innerHTML = "Network error. Please try again later.";
+        formStatus.style.color = "red";
+    }
+});

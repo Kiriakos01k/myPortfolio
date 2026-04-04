@@ -9,17 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
-    <!---------navabar----------->
+    <!---------navbar----------->
     <nav>
         <div class ="left">
             <a href="/">Kiriakos Tsitouridis</a>
         </div>
         <div class ="right">
-            <a href="http://github.com" target="_blank" rel="noopener no-referrer">
+            <a href="https://github.com/Kiriakos01k" target="_blank" rel="noopener no-referrer">
                 <i class="fa-brands fa-github"></i>
                 <span>Github</span>
             </a>
-            <a href="http://Linkedin.com" target="_blank" rel="noopener no-referrer">
+            <a href="https://www.linkedin.com/in/dimitrios-kiriakos-tsitouridis/" target="_blank" rel="noopener no-referrer">
                 <i class="fa-brands fa-linkedin"></i>
                 <span>Linkedin</span>
             </a>
@@ -237,7 +237,9 @@
 
             <!-- RIGHT SIDE -->
             <div class="contact-right">
-                <form class="contact-form">
+                <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="62eb4209-5faf-463c-8b5c-31e442c568c0">
+                    <input type="checkbox" name="botcheck" style="display: none;">
                     <div class="input-group">
                         <label for="name">Username</label>
                         <input type="text" id="name" name="name" placeholder="Enter your username" required>
@@ -254,6 +256,7 @@
                     </div>
 
                     <button type="submit" class="contact-btn">Send Message</button>
+                    <p id="form-status"></p>
                 </form>
             </div>
 
@@ -261,6 +264,6 @@
     </div>
 </section>
     </main>
-    
+    <script src="script.js"></script>
 </body>
 </html>
