@@ -469,7 +469,7 @@ nav .right a:hover{
         padding: 80px 6%;
     }
     .contact-wrapper{
-        grid-template-columns: 1fr 1.3fr;
+        grid-template-columns: 1.3fr;
     }
 
     .contact-header h2 {
