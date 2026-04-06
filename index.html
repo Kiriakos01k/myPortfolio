@@ -27,6 +27,9 @@
                 <i class="fa-solid fa-envelope"></i>
                 <span>Email</span>
             </a>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
         </div>
     </nav>
     <main>
@@ -149,20 +152,24 @@
             <div class="experience-container">
                 <h2>Experience - Education</h2>
                 <div class="experience-grid">
+                    <div class="experience-card">
                         <h3> Mandatory Military Service / Operations assistant at Hellenic Navy, Greece</h3> 
                         <p> 
                         Responsible for the management, inventory control and equipment, worked closely with senior 
                         navy officers within a structured and demanding environment in compliance with strict safety 
                         and security protocols. 
-                        11/2024 - 11/2025 
+                        </p>
+                        <span>11/2024 - 11/2025 </span>
+                    </div>
+                    <div class="experience-card">
                         <h3> Internship / IT support at QMS, Greece </h3>
                         <p>
                         Provided IT support for company's related systems and applications, assisting users with 
                         software, hardware and access issues. Supported system maintenance and compliance-related 
-                        IT tasks.  
-                        07/2022 - 09/2022 
-                        </p>
-                
+                        IT tasks. 
+                        </p> 
+                        <span>07/2022 - 09/2022 </span>
+                        
                 </div>
             </div>
         </section>
@@ -242,7 +249,7 @@
                     <input type="checkbox" name="botcheck" style="display: none;">
                     <div class="input-group">
                         <label for="name">Username</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your username" required>
+                        <input type="text" id="name" name="name" placeholder="Enter your username" pattern="[A-Za-z\s]+" title="Please enter letters only" required>
                     </div>
 
                     <div class="input-group">

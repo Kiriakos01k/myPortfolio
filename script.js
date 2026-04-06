@@ -36,3 +36,31 @@ form.addEventListener("submit", async function (e) {
         formStatus.style.color = "red";
     }
 });
+
+// Dark Mode Toggle
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+const themeIcon = themeToggle.querySelector("i");
+
+// Load saved theme
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    themeIcon.classList.remove("fa-moon");
+    themeIcon.classList.add("fa-sun");
+}
+
+themeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    const isDark = body.classList.contains("dark-mode");
+
+    if (isDark) {
+        localStorage.setItem("theme", "dark");
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+    } else {
+        localStorage.setItem("theme", "light");
+        themeIcon.classList.remove("fa-sun");
+        themeIcon.classList.add("fa-moon");
+    }
+});
