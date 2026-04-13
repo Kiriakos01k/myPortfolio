@@ -40,7 +40,6 @@ form.addEventListener("submit", async function (e) {
 // Dark Mode Toggle
 const themeToggle = document.getElementById("theme-toggle");
 const body = document.body;
-const themeIcon = themeToggle.querySelector("i");
 
 // Load saved theme
 if (localStorage.getItem("theme") === "dark") {
